@@ -1,0 +1,6 @@
+{
+  "name": "azit-gallery",
+  "private": true,
+  "type": "module",
+  "description": "azit.ash84.io — static photo gallery. Tooling runs through npx; nothing to install."
+}

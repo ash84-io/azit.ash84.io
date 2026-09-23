@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AZIT — 아지트를 만드는 데 영감을 주는 사진들</title>
+    <meta
+      name="description"
+      content="아지트를 만드는 데 영감을 주는 사진들. 작업실, 창고, 카페 외관까지 — 아지트 냄새가 나는 장면을 모아둡니다."
+    />
+    <meta name="author" content="ash84" />
+    <meta name="robots" content="index, follow" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#1a1818" media="(prefers-color-scheme: dark)" />
+    <link rel="canonical" href="https://azit.ash84.io/" />
+
+    <meta property="og:title" content="AZIT — 아지트를 만드는 데 영감을 주는 사진들" />
+    <meta
+      property="og:description"
+      content="작업실, 창고, 카페 외관까지 — 아지트 냄새가 나는 장면을 모아둡니다."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://azit.ash84.io/" />
+    <meta property="og:site_name" content="AZIT" />
+    <meta property="og:locale" content="ko_KR" />
+    <meta name="twitter:card" content="summary" />
+
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&family=Geist+Mono:wght@400;500&family=Noto+Sans+KR:wght@400;500&display=swap"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preload" href="images/manifest.json" as="fetch" crossorigin />
+  </head>
+  <body>
+    <a class="skip-link" href="#photos">사진으로 건너뛰기</a>
+
+    <header class="nav">
+      <nav class="nav-inner" aria-label="주 메뉴">
+        <a class="logo" href="/" aria-label="AZIT — 홈"><span class="mark"></span></a>
+        <div class="menus">
+          <ul class="menu">
+            <li><a href="/" aria-current="page">사진</a></li>
+            <li><button type="button" id="shuffle-button" class="menu-button">무작위</button></li>
+          </ul>
+          <ul class="menu menu-right">
+            <li class="sub-heading" aria-hidden="true">Elsewhere –</li>
+            <li><a href="https://ash84.io" rel="me">ash84.io</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main">
+      <p class="description">아지트를 만드는 데 영감을 주는 사진들</p>
+      <section id="photos" class="photos" aria-label="사진">
+        <p class="status" id="status" role="status">불러오는 중…</p>
+      </section>
+    </main>
+
+    <footer class="footer">© 2026 ash84.io — azit.ash84.io</footer>
+
+    <dialog class="viewer" id="viewer" aria-label="사진 크게 보기">
+      <img
+        id="viewer-image"
+        class="viewer-image"
+        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E"
+        alt=""
+      />
+      <p class="viewer-meta" id="viewer-meta" aria-live="polite">
+        <span id="viewer-title"></span><span id="viewer-date"></span>
+      </p>
+      <button
+        type="button"
+        class="viewer-button viewer-prev"
+        id="viewer-prev"
+        aria-label="이전 사진"
+      >
+        ←
+      </button>
+      <button
+        type="button"
+        class="viewer-button viewer-next"
+        id="viewer-next"
+        aria-label="다음 사진"
+      >
+        →
+      </button>
+      <button type="button" class="viewer-button viewer-close" id="viewer-close" aria-label="닫기">
+        닫기
+      </button>
+    </dialog>
+
+    <script type="module" src="js/gallery.js"></script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+[project]
+name = "azit-gallery-tools"
+version = "0.1.0"
+description = "Build scripts for azit.ash84.io: image conversion, manifest generation, site verification"
+requires-python = ">=3.12"
+dependencies = ["pillow>=11"]
+
+[dependency-groups]
+dev = ["pytest>=8", "ruff>=0.13"]
+
+[tool.uv]
+package = false
+
+[tool.ruff]
+line-length = 99
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.pytest.ini_options]
+testpaths = ["tools/tests"]
+pythonpath = ["."]

@@ -1,0 +1,10 @@
+# Original photos stay local; only the generated WebP files are committed.
+originals/*
+!originals/.gitkeep
+
+.venv/
+node_modules/
+.pytest_cache/
+.ruff_cache/
+__pycache__/
+.DS_Store
