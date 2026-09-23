@@ -107,7 +107,8 @@ azit.ash84.io/                 ← 현재 폴더명 atelier.ash84.io (이름 변
 - [x] Step 7: `make verify` — manifest의 모든 경로가 실제 파일인지, `thumb`/`full` 짝이 맞는지 검사. 검증: 의도적으로 파일을 빼고 실패하는지 확인.
 - [x] Step 8: `.github/workflows/pages.yml` — push(main) 시 `make lint test verify` 후 `site/`를 Pages로 배포. PR에서는 lint/test만. 검증: 첫 배포 후 `https://azit.ash84.io` 200.
 - [x] Step 9: 문서 — README(사진 추가 절차: `originals/`에 넣기 → `make build` → 커밋), 열린 질문 결정 사항 반영.
-- [ ] Step 10: 저장소 `ash84-io/azit.ash84.io` 생성·push(claude), Pages 소스를 "GitHub Actions"로 설정, DNS `azit` CNAME → `ash84-io.github.io`, 첫 사진들을 `originals/`에 넣기(사용자).
+- [x] Step 10-a (claude, 2026-09-23): 저장소 https://github.com/ash84-io/azit.ash84.io 생성·push, Pages build_type=workflow, custom domain `azit.ash84.io` 설정, 첫 워크플로(run 35831822282) check+deploy 성공.
+- [ ] Step 10-b (사용자): DNS `azit` CNAME → `ash84-io.github.io` 추가 후 Pages에서 "Enforce HTTPS" 켜기, 첫 사진들을 `originals/`에 넣고 `make build` → 커밋·push.
 
 ## 5. 테스트 계획
 
